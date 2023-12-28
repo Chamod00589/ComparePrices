@@ -153,7 +153,7 @@ function Pricing() {
             <td className="pl-3">26.01.2023</td>
           </tr>
           <tr className="">
-            <td colSpan={4} >
+            <td colSpan={4}>
               <div>
                 <span className="pl-2 text-light-6">Location</span>
                 <span className=" pl-2">Gampaha</span>
@@ -167,16 +167,16 @@ function Pricing() {
 
           <tr>
             <td className="  text-red1 text-lg">Rs 2 55,900</td>
-            <td
-              className="pl-3 underline text-blue-600  text-xs
-"
-            >
-              Edit
-            </td>
+            <td className="pl-3 underline text-blue-600  text-xs">Edit</td>
             <td className="pl-3 ">Nanotek.lk</td>
             <td className="pl-3">26.01.2023</td>
           </tr>
         </table>
+      </div>
+      <div className="flex justify-center">
+        <button className="bg-yellow1 hover:bg-yellow-200 py-2 px-4 my-2 rounded-lg">
+          Add new shop price
+        </button>
       </div>
     </div>
   );
@@ -185,9 +185,10 @@ function Pricing() {
 function Home() {
   return (
     <div className="bg-light-2 ">
-      <div className=" h-screen text-black mx-auto lg:w-3/5 w-full sm:text-sm">
+      <div className=" h-full text-black mx-auto lg:w-3/5 w-full sm:text-sm">
         <Header />
         <ImageSection />
+        <Pricing />
         <Pricing />
       </div>
     </div>

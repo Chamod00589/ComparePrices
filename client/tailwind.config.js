@@ -33,6 +33,7 @@ export default {
           // 11: "#FEFFFF",
         },
         red1: "#C3291C",
+        yellow1: "#FAE179",
         blue1:"#2238FF",
         blue2:"#8EC0FF",
         blue3:"#E7F1FF"
