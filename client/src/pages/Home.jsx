@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../component/header";
 import StorageIcon from "../assets/StorageIcon.svg";
 import RamIcon from "../assets/RamIcon.svg";
 import ProcesserIcon from "../assets/ProcesserIcon.svg";
 import DisplayIcon from "../assets/DisplayIcon.svg";
 import Laptop from "../assets/Laptop.png";
+import { lapInfo } from "../data/LapSpec";
 
 const testMode = false;
 function ImageSection() {
@@ -107,27 +108,6 @@ function ImageSection() {
   );
 }
 
-// Asus Zenbook Flip 13
-// UX363EA-DH51T
-
-// <div className={`flex flex-col font-Abel`}>
-
-// {/* <div
-//   className={`flex flex-col sm:flex-row sm:items-center justify-center sm:justify-start border-red ${
-//     testMode ? "border-2" : ""
-//   } bg-gradient-to-r from-light-6 to-blue2`}
-// >
-//   df
-// </div> */}
-// <div
-//   className={`h-96 flex-grow border-blue-900 ${
-//     testMode ? "border-2" : ""
-//   }`}
-// >
-//   down
-// </div>
-// </div>
-
 function Pricing() {
   return (
     <div className="mt-2 bg-light-1 px-4 py-3 font-bold">
@@ -182,6 +162,140 @@ function Pricing() {
   );
 }
 
+// const LaptopSpecs = () => {
+//   const [specifications, setSpecifications] = useState(lapInfo.data.items[0]);
+
+//   if (!specifications) {
+//     return <div>Loading...</div>;
+//   }
+
+//   return (
+//     <div>
+//       <div className="flex flex-row mt-2 bg-light-1 px-4 py-3 text-lg border-2 border-black font-Abel font-bold">
+//         <div className="pt-0 px-4 text-xl border-0 text-red1 font-bold border-black  w-28">
+//           Display
+//         </div>
+
+//         <div className="w-full">
+//           <div className="flex flex-row  border-b-2 border-light-3 w-full">
+//             <div className=" w-36 border-0 border-black text-light-8 ">
+//               Definition
+//             </div>
+//             <div className=" border-0 border-black w-full ">
+//               {specifications.display.definition}
+//             </div>
+//           </div>
+
+//           <div className="flex flex-row  border-b-2 border-light-3 w-full">
+//             <div className=" w-36 border-0 border-black text-light-8">
+//               Diagonal
+//             </div>
+//             <div className=" border-0 border-black w-full ">
+//               {specifications.display.diagonal}
+//             </div>
+//           </div>
+
+//           <div className="flex flex-row  border-b-2 border-light-3 w-full">
+//             <div className=" w-36 border-0 border-black text-light-8">
+//               Resolution
+//             </div>
+//             <div className=" border-0 border-black w-full ">
+//               {specifications.display["resolution_(h_x_w)"]}
+//             </div>
+//           </div>
+//         </div>
+
+
+        
+//       </div>
+//       <div className="flex flex-row mt-2 bg-light-1 px-4 py-3 text-lg border-2 border-black font-Abel font-bold">
+//         <div className="pt-0 px-4 text-xl border-0 text-red1 font-bold border-black  w-28">
+//           Display
+//         </div>
+
+//         <div className="w-full">
+//           <div className="flex flex-row  border-b-2 border-light-3 w-full">
+//             <div className=" w-36 border-0 border-black text-light-8 ">
+//               Definition
+//             </div>
+//             <div className=" border-0 border-black w-full ">
+//               {specifications.display.definition}
+//             </div>
+//           </div>
+
+//           <div className="flex flex-row  border-b-2 border-light-3 w-full">
+//             <div className=" w-36 border-0 border-black text-light-8">
+//               Diagonal
+//             </div>
+//             <div className=" border-0 border-black w-full ">
+//               {specifications.display.diagonal}
+//             </div>
+//           </div>
+
+//           <div className="flex flex-row  border-b-2 border-light-3 w-full">
+//             <div className=" w-36 border-0 border-black text-light-8">
+//               Resolution
+//             </div>
+//             <div className=" border-0 border-black w-full ">
+//               {specifications.display["resolution_(h_x_w)"]}
+//             </div>
+//           </div>
+//         </div>
+
+
+
+//       </div>
+//     </div>
+//   );
+// };
+const formatKey = (key) => {
+  // Replace underscores with spaces and capitalize the first letter of each word
+  let formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
+
+  // Add line break if the key has more than 13 characters and contains an open bracket
+  if (formattedKey.length > 13 && formattedKey.includes('(')) {
+    formattedKey = formattedKey.replace(/\(/, '\n(');
+  }
+
+  return formattedKey;
+};
+
+const Section = ({ title, data }) => (
+  <div className="flex flex-row mt-2 bg-light-1 px-4 py-3 text-lg border-0 border-black font-Abel font-bold">
+    <div className="pt-0 px-4 text-xl border-0 text-red1 font-bold border-black w-28">
+      {title}
+    </div>
+
+    <div className="w-full">
+      {Object.entries(data).map(([key, value]) => (
+        <div key={key} className="flex flex-row border-b-2 border-light-3 w-full">
+          <div style={{ whiteSpace: 'pre-line' }} className="w-36 border-0 border-black text-light-8" >{formatKey(key)}</div>
+          <div className="border-0 border-black w-full">{value}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+const LaptopSpecs = () => {
+  const [specifications, setSpecifications] = useState(lapInfo.data.items[0]);
+
+  if (!specifications) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div>
+      <Section title="Key Aspects" data={specifications.key_aspects} />
+      <Section title="Display" data={specifications.display} />
+      <Section title="Design" data={specifications.design.body} />
+      <Section title="inside" data={specifications.inside.cpu} />
+    </div>
+  );
+};
+
+
+
 function Home() {
   return (
     <div className="bg-light-2 ">
@@ -189,7 +303,7 @@ function Home() {
         <Header />
         <ImageSection />
         <Pricing />
-        <Pricing />
+        <LaptopSpecs />
       </div>
     </div>
   );
