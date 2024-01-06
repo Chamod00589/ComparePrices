@@ -6,12 +6,18 @@ import ProcesserIcon from "../assets/ProcesserIcon.svg";
 import DisplayIcon from "../assets/DisplayIcon.svg";
 import Laptop from "../assets/Laptop.png";
 import { lapInfo } from "../data/LapSpec";
+import Search from "./Search";
 
 const testMode = false;
 
 function Home() {
-  const [specifications, setSpecifications] = useState(lapInfo.data.items[0]);
+  const [isSearching, setIsSearching] = useState(true);
+  const [specifications, setSpecifications] = useState(
+    lapInfo[1].data.items[0]
+  );
 
+  console.log(specifications);
+  console.log("specifications");
   function ImageSection() {
     return (
       <div
@@ -33,7 +39,11 @@ function Home() {
           } flex  max-h-60`}
         >
           <img
-            src={Laptop}
+            src={
+              specifications?.image?.front == null
+                ? ""
+                : specifications.image.front
+            }
             alt="LaptopImage"
             className={` border-red-900 ${
               testMode ? "border-2" : ""
@@ -95,10 +105,10 @@ function Home() {
               />
               <div className="flex flex-col ml-2 justify-center">
                 <span className="font-bold text-base text-lg leading-3">
-                  8 GB RAM
+                  {specifications.inside.ram.capacity}
                 </span>
                 <span className="text-xs text-light-6  leading-3">
-                  On-board
+                  {specifications.inside.ram.type}
                 </span>
               </div>
             </div>
@@ -113,8 +123,12 @@ function Home() {
                 className={` w-7 h-7 sm:w-9 sm:h-9`}
               />
               <div className="flex flex-col ml-2 justify-center">
-                <span className="font-bold text-base leading-none">512 GB</span>
-                <span className="text-xs text-light-6  leading-3">SSD</span>
+                <span className="font-bold text-base leading-none">
+                  {specifications.inside.storage.total_capacity}
+                </span>
+                <span className="text-xs text-light-6  leading-3">
+                  {specifications.inside.ssd.storage_type}
+                </span>
               </div>
             </div>
           </div>
@@ -192,28 +206,29 @@ function Home() {
   };
 
   const Section = ({ title, data }) => (
-    <div className="sm:text-lg text-sm flex flex-row my-2 bg-light-1 px-4 py-3   border-0 border-black font-Abel font-bold">
-      <div className="pt-0 px-4 border-0 text-red1 font-bold border-black w-36">
+    <div className="sm:text-lg text-sm flex flex-col  bg-light-1    my-2 border-0 border-black font-Abel font-bold">
+      <div className=" border-0 sm:text-lg text-xl  text-red1 font-bold border-black w-full px-4 my-0  bg-light-1">
         {title}
       </div>
-
-      <div className="w-full">
-        {Object.entries(data).map(([key, value], index, array) => (
-          <div
-            key={key}
-            className={`flex flex-row ${
-              index === array.length - 1 ? "" : "border-b-2 border-light-3"
-            } w-full`}
-          >
+      <div className="my-0 px-4">
+        <div className="w-full">
+          {Object.entries(data).map(([key, value], index, array) => (
             <div
-              style={{ whiteSpace: "pre-line" }}
-              className="sm:w-64 w-44 border-0 border-black text-light-8"
+              key={key}
+              className={`flex flex-row ${
+                index === array.length - 1 ? "" : "border-b-2 border-light-3"
+              } w-full`}
             >
-              {formatKey(key)}
+              <div
+                style={{ whiteSpace: "pre-line" }}
+                className="sm:w-64 w-44 border-0 border-black text-light-8 "
+              >
+                {formatKey(key)}
+              </div>
+              <div className="ml-2 border-0 border-black w-full">{value}</div>
             </div>
-            <div className="ml-2 border-0 border-black w-full">{value}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -232,39 +247,39 @@ function Home() {
         {Object.entries(specifications.design).map(
           ([sectionTitle, sectionData]) => (
             <Section
-            key={sectionTitle}
-            title={sectionTitle.toUpperCase()}
-            data={sectionData}
+              key={sectionTitle}
+              title={sectionTitle.toUpperCase()}
+              data={sectionData}
             />
-            )
-            )}
+          )
+        )}
         {Object.entries(specifications.inside).map(
           ([sectionTitle, sectionData]) => (
             <Section
-            key={sectionTitle}
-            title={sectionTitle.toUpperCase()}
-            data={sectionData}
+              key={sectionTitle}
+              title={sectionTitle.toUpperCase()}
+              data={sectionData}
             />
-            )
-            )}
+          )
+        )}
         {Object.entries(specifications.camera).map(
           ([sectionTitle, sectionData]) => (
             <Section
-            key={sectionTitle}
-            title={sectionTitle.toUpperCase()}
-            data={sectionData}
+              key={sectionTitle}
+              title={sectionTitle.toUpperCase()}
+              data={sectionData}
             />
-            )
-            )}
-            <Section title="Not Including" data={specifications.No} />
+          )
+        )}
+        <Section title="Not Including" data={specifications.No} />
       </div>
     );
   };
-
   return (
     <div className="bg-light-2 ">
       <div className=" h-full text-black mx-auto lg:w-3/5 w-full sm:text-sm">
-        <Header />
+        <Header isSearching={isSearching} setIsSearching={setIsSearching} />
+        {isSearching ? <Search setSpecifications={setSpecifications} setIsSearching={setIsSearching}/> : ""}
         <ImageSection />
         <Pricing />
         <LaptopSpecs />

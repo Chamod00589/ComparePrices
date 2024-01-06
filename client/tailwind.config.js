@@ -17,7 +17,9 @@ export default {
           4: "#CECFD4",
           3: "#E8E9ED",
           2: "#EEEBE9",
-          1: "#FEFFFF",
+          1: "#F6F6F6",
+          0: "#FEFFFF",
+
           
           
           // 1: "#000000",
