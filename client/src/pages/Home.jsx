@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Header from "../component/header";
+import Header from "../component/Header";
 import StorageIcon from "../assets/StorageIcon.svg";
 import RamIcon from "../assets/RamIcon.svg";
 import ProcesserIcon from "../assets/ProcesserIcon.svg";
