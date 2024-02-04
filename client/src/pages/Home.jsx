@@ -5,7 +5,7 @@ import RamIcon from "../assets/RamIcon.svg";
 import ProcesserIcon from "../assets/ProcesserIcon.svg";
 import DisplayIcon from "../assets/DisplayIcon.svg";
 import Laptop from "../assets/Laptop.png";
-import { lapInfo } from "../data/LapSpec";
+import { lapInfo } from "../data/LapSpec.js";
 import Search from "./Search";
 
 const testMode = false;
