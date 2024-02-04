@@ -39,6 +39,7 @@ function Home() {
           } flex  max-h-60`}
         >
           <img
+          // src="https://e7.pngegg.com/pngimages/398/672/png-clipart-gray-acer-laptop-laptop-laptop-notebook-electronics-gadget-thumbnail.png"
             src={
               specifications?.image?.front == null
                 ? ""
