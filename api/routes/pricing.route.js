@@ -4,6 +4,8 @@ const router = express.Router();
 
 
 router.post("/create", createPricing);
+// router.get("/get", getPricings);
+
 
 
 export default router;
