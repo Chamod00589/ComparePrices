@@ -6,7 +6,7 @@ import ProcesserIcon from "../assets/ProcesserIcon.svg";
 import DisplayIcon from "../assets/DisplayIcon.svg";
 import Laptop from "../assets/Laptop.png";
 import { lapInfo } from "../data/LapSpec.js";
-import Search from "../component/Search";
+import Search from "./Search";
 import Pricing from "../component/Pricing";
 
 
