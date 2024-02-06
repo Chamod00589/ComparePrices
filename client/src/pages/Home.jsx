@@ -18,8 +18,8 @@ function Home() {
     lapInfo[1].data.items[0]
   );
 
-  console.log(specifications);
-  console.log("specifications");
+  // console.log(specifications);
+  // console.log("specifications");
   function ImageSection() {
     return (
       <div
@@ -238,7 +238,7 @@ function Home() {
           ""
         )}
         <ImageSection />
-        <Pricing />
+        <Pricing id={specifications.product.id}/>
         <LaptopSpecs />
       </div>
     </div>

@@ -1,10 +1,10 @@
 import express from "express";
-import { createPricing } from "../controllers/pricing.controller.js";
+import { createPricing, getPricing } from "../controllers/pricing.controller.js";
 const router = express.Router();
 
 
 router.post("/create", createPricing);
-// router.get("/get", getPricings);
+router.get("/get/:id", getPricing);
 
 
 

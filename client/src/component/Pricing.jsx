@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-export default function Pricing() {
+export default function Pricing({ id }) {
+  const [prices, setPrices] = useState([]);
+  fetch("/api/pricing/get/603f688ba2c1f54a78059d8");
+  console.log(id);
+  useEffect(() => {
+    fetch(`/api/pricing/get/${id}`)
+      // Fetch data from the API
+      .then((response) => response.json())
+      .then((data) => setPrices(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, [id]); // The empty dependency array ensures that this effect runs once after the initial render
+
   return (
     <div className="mt-2 bg-light-1 px-4 py-3 font-bold">
       <div className="text-2xl">Pricing</div>
@@ -15,33 +26,47 @@ export default function Pricing() {
           </div>
 
           {/* Data Rows */}
-          <div className="flex p-2 items-center">
+          {/* <div className="flex p-2 items-center">
             <div className="w-1/4 text-red1 text-lg">Rs 3 85,900</div>
             <div className=" pl-3 underline text-blue-600 w-1/6 text-xs">
               Edit
             </div>
             <div className="pl-3 w-1/4">Laptop.lk</div>
-            <div className="pl-3 w-1/4">26.01.2023</div>
-          </div>
+            <div className="pl-3 w-1/4">26.03.2023</div>
+          </div> */}
 
-          <div className="flex p-2 items-center">
+          {/* <div className="flex p-2 items-center">
             <div className="w-1/4 text-red1 text-lg">Rs 2 55,900</div>
             <div className=" pl-3 underline text-blue-600 w-1/6 text-xs">
               Edit
             </div>
             <div className="pl-3 w-1/4">Nanotek.lk</div>
-            <div className="pl-3 w-1/4">26.01.2023</div>
-          </div>
+            <div className="pl-3 w-1/4">16.03.2023</div>
+          </div> */}
 
           {/* Another Data Row */}
-          <div className="flex p-2 items-center ">
+          {/* <div className="flex p-2 items-center ">
             <div className="w-1/4 text-red1 text-lg">Rs 2 55,900</div>
             <div className=" pl-3 underline text-blue-600 w-1/6 text-xs">
               Edit
             </div>
-            <div className="pl-3 w-1/4">Nanotek.lk</div>
-            <div className="pl-3 w-1/4">26.01.2023</div>
-          </div>
+            <div className="pl-3 w-1/4">GameLine.lk</div>
+            <div className="pl-3 w-1/4">19.02.2023</div>
+          </div> */}
+
+          {/* Data Rows */}
+          {prices.map((price) => (
+            <div key={price._id} className="flex p-2 items-center">
+              <div className="w-1/4 text-red1 text-lg">{`Rs ${price.price}`}</div>
+              <div className="pl-3 underline text-blue-600 w-1/6 text-xs">
+                Edit
+              </div>
+              <div className="pl-3 w-1/4">{price.website}</div>
+              <div className="pl-3 w-1/4">
+                {new Date(price.lastUpdate).toLocaleDateString("en-GB")}
+              </div>
+            </div>
+          ))}
         </div>
         {/* Button */}
         <div className="flex justify-center">

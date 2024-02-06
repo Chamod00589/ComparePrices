@@ -27,6 +27,7 @@ export default function Search({ setIsSearching, setSpecifications }) {
 
     // Set the specifications with the selected item
     setSpecifications(selectedItem.data.items[0]);
+
     setIsSearching(false);
     
     // You may also perform any other actions related to item click
