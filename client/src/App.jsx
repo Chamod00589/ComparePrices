@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Search from "./component/Search";
+import LapOverView from "./pages/LapOverView";
 function App() { 
   return (
     // <div className="flex justify-center items-center ">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/search" element={<Search />} />
+          <Route path="/LapOverView" element={<LapOverView />} />
         </Routes>
       </BrowserRouter>
     // </div>

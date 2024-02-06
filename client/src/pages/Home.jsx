@@ -9,10 +9,9 @@ import { lapInfo } from "../data/LapSpec.js";
 import Search from "../component/Search";
 import Pricing from "../component/Pricing";
 
-
 const testMode = false;
 
-function Home() {
+export default function Home() {
   const [isSearching, setIsSearching] = useState(true);
   const [specifications, setSpecifications] = useState(
     lapInfo[1].data.items[0]
@@ -245,4 +244,4 @@ function Home() {
   );
 }
 
-export default Home;
+

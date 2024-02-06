@@ -6,10 +6,10 @@ export default function Pricing({ id }) {
   const [formData, setFormData] = useState({
     laptopId: id,
     price: "",
+    name: "",
     website: "",
     lastUpdate: new Date().toISOString().split("T")[0],
   });
-
 
   useEffect(() => {
     const fetchPricing = async () => {
@@ -36,6 +36,7 @@ export default function Pricing({ id }) {
     if (
       !formData.laptopId ||
       !formData.price ||
+      !formData.name ||
       !formData.website ||
       !formData.lastUpdate
     ) {
@@ -59,6 +60,7 @@ export default function Pricing({ id }) {
         setFormData({
           laptopId: id,
           price: "",
+          name: "",
           website: "",
           lastUpdate: new Date().toISOString().split("T")[0],
         });
@@ -86,7 +88,13 @@ export default function Pricing({ id }) {
               <div className="pl-3 underline text-blue-600 w-1/6 text-xs">
                 Edit
               </div>
-              <div className="pl-3 w-1/4">{price.website}</div>
+              <a
+                href={price.website}
+                target="_blank"
+                className="pl-3 w-1/4 cursor-pointer"
+              >
+                {price.name}
+              </a>
               <div className="pl-3 w-1/4">
                 {new Date(price.lastUpdate).toLocaleDateString("en-GB")}
               </div>
@@ -125,11 +133,22 @@ export default function Pricing({ id }) {
                   />
                 </div>
                 <div className="flex items-center justify-center">
+                  <label className="mb-2 sm:w-1/5 w-2/5">Name:</label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="LapStore.lk"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="border p-1 mb-4 w-full sm:w-1/2 pl-4"
+                  />
+                </div>
+                <div className="flex items-center justify-center">
                   <label className="mb-2 sm:w-1/5 w-2/5">Website:</label>
                   <input
                     type="text"
                     name="website"
-                    placeholder="LapStore.lk"
+                    placeholder="https://www.nanotek.lk/"
                     value={formData.website}
                     onChange={handleInputChange}
                     className="border p-1 mb-4 w-full sm:w-1/2 pl-4"

@@ -9,6 +9,10 @@ const pricingSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  name: {
+    type: String,
+    required: true,
+  },
   website: {
     type: String,
     required: true,
