@@ -2,15 +2,31 @@ import React, { useState, useEffect } from "react";
 
 export default function Pricing({ id }) {
   const [prices, setPrices] = useState([]);
-  fetch("/api/pricing/get/603f688ba2c1f54a78059d8");
-  console.log(id);
+
+  // useEffect(() => {
+  //   fetch(`/api/pricing/get/${id}`)
+  //     // Fetch data from the API
+  //     .then((response) => response.json())
+  //     .then((data) => setPrices(data))
+  //     .catch((error) => console.error("Error fetching data:", error));
+  // }, [id]); // The empty dependency array ensures that this effect runs once after the initial render
+
+console.log(id);
   useEffect(() => {
-    fetch(`/api/pricing/get/${id}`)
-      // Fetch data from the API
-      .then((response) => response.json())
-      .then((data) => setPrices(data))
-      .catch((error) => console.error("Error fetching data:", error));
-  }, [id]); // The empty dependency array ensures that this effect runs once after the initial render
+    const fetchPricing = async () => {
+      const res = await fetch(`/api/pricing/get/${id}`);
+      const data = await res.json();
+      if (data.success === false) {
+        console.log(data.message);
+        setPrices([])
+        return;
+      }
+      setPrices(data)
+    };
+
+    fetchPricing();
+  }, [id]);
+
 
   return (
     <div className="mt-2 bg-light-1 px-4 py-3 font-bold">
