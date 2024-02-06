@@ -15,7 +15,7 @@ export default function LapOverView() {
   const { id } = useParams(); // Fetching id parameter from URL
   const [isSearching, setIsSearching] = useState(true);
   const [specifications, setSpecifications] = useState(
-    lapInfo[1].data.items[0]
+    lapInfo[0].data.items[0]
   );
 
   // console.log(id)

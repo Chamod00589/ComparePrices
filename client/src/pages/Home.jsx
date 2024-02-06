@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   const [isSearching, setIsSearching] = useState(true);
   const [specifications, setSpecifications] = useState(
-    lapInfo[1].data.items[0]
+    lapInfo[0].data.items[0]
   );
 
   const Card = ({ item }) => {
