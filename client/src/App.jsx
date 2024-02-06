@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Search from "./component/Search";
+import Search from "./pages/Search";
 function App() { 
   return (
     // <div className="flex justify-center items-center ">
