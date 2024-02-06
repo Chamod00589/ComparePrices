@@ -16,10 +16,11 @@ app.get("*", (req, res) => {
 });
 
 
+const port = process.env.PORT || 4000;
 
-app.listen(10000, () => {
-  console.log("Server is running on port 3000!");
-});
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 
 app.use("/api/pricing", pricingRouter);
 
