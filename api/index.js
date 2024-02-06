@@ -22,6 +22,7 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
+// http://localhost:3000/api/pricing/get/63e963bba6803e6331dd4762
 app.use("/api/pricing", pricingRouter);
 
 mongoose
