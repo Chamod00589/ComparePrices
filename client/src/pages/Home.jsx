@@ -14,14 +14,14 @@ export default function Home() {
     return (
       <Link
         to={`/LapOverView/${item.product.id}`}
-        className="max-w-xs rounded overflow-hidden shadow-lg m-4"
+        className="max-w-xs rounded overflow-hidden shadow-lg m-4 flex items-center justify-center flex-col"
       >
         <img
-          src={item.image?.front == null ? "" : item.image.front}
+          src={item.image?.large == null ? "" : item.image.large}
           alt="Product"
-          className="w-full"
+          className="w-4/5 pt-4"
         />
-        {console.log(item.image.front)}
+        {console.log(item.image.large)}
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{`${item.product.brand} ${item.product.family} ${item.product.series} ${item.product.version}`}</div>
         </div>

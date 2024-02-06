@@ -4847,7 +4847,7 @@ export let LapList = {
         },
         image: {
           front:
-            "https://lifemobile.lk/wp-content/uploads/2021/06/Asus-Zenbook-14-UX425EA-3.jpg",
+            "https://lifemobile.lk/wp-content/uploads/2021/06/Asus-Zenbook-14-UX425EA-2.jpg",
           back: null,
           thumbnail:
             "https://i.techspecs.io/product-images-thumbnail/laptops/3cd13509-d18e-4213-9016-543dd146ded4.jpeg",
@@ -4867,7 +4867,7 @@ export let LapList = {
         },
         image: {
           front:
-            "https://lifemobile.lk/wp-content/uploads/2021/06/Asus-Zenbook-14-UX425EA-3.jpg",
+            "https://www.laptoparena.net/images/ASUS_VivoBook_15_A513EA-BQ1355T_A513EA-BQ1355T_image_5.jpg",
           back: null,
           thumbnail:
             "https://i.techspecs.io/product-images-thumbnail/laptops/2bbf16d5-3fa9-4c3a-8e7c-9d069ee30b5f.jpeg",
@@ -4887,7 +4887,7 @@ export let LapList = {
         },
         image: {
           front:
-            "https://e7.pngegg.com/pngimages/398/672/png-clipart-gray-acer-laptop-laptop-laptop-notebook-electronics-gadget-thumbnail.png",
+            "https://m.media-amazon.com/images/I/716RM5grSkL._AC_UF894,1000_QL80_.jpg",
           back: null,
           thumbnail:
             "https://i.techspecs.io/product-images-thumbnail/laptops/ed93f9a6-ab4a-4239-af12-f72eae1f8e32.jpeg",
@@ -4906,7 +4906,7 @@ export let LapList = {
           category: "Laptops",
         },
         image: {
-          front: null,
+          front: "https://s3-apw.badencloud.store/49882-cdn/8deda81b-60fe-49fa-899b-cc9b5581576e_2_1695651456.jpg",
           back: null,
           thumbnail:
             "https://i.techspecs.io/product-images-thumbnail/laptops/70627a83-182b-4f66-ad25-957a3542d610.jpeg",
@@ -4925,7 +4925,7 @@ export let LapList = {
           category: "Laptops",
         },
         image: {
-          front: null,
+          front: "https://s3-apw.badencloud.store/49882-cdn/b055b90c-a954-4b14-9418-041fe3ccc19f_1_1695651537.jpg",
           back: null,
           thumbnail:
             "https://i.techspecs.io/product-images-thumbnail/laptops/f34e9f3a-795c-41ae-a1f7-044f899d6536.jpeg",
@@ -4944,7 +4944,7 @@ export let LapList = {
           category: "Laptops",
         },
         image: {
-          front: null,
+          front: "https://www.techedgeuk.co.uk/cdn/shop/files/AsusChromebookCX1400CMA6_c0b4e5d2-c3cb-4caa-bb5f-2a38e5a51271_700x700.jpg?v=1692187065",
           back: null,
           thumbnail:
             "https://i.techspecs.io/product-images-thumbnail/laptops/244d38d8-739f-461b-91bb-47ff94698232.jpeg",

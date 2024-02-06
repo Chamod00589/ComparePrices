@@ -53,9 +53,9 @@ export default function LapOverView() {
           <img
             // src="https://e7.pngegg.com/pngimages/398/672/png-clipart-gray-acer-laptop-laptop-laptop-notebook-electronics-gadget-thumbnail.png"
             src={
-              specifications?.image?.front == null
+              specifications?.image?.large == null
                 ? ""
-                : specifications.image.front
+                : specifications.image.large
             }
             alt="LaptopImage"
             className={` border-red-900 ${
