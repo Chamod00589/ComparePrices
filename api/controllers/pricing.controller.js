@@ -15,7 +15,7 @@ export const getPricing = async (req, res, next) => {
     const pricingData = await Pricing.find({
       laptopId: req.params.id,
     });
-
+    console.log(pricingData)
     // Check if pricingData is empty (no matching records found)
     if (!pricingData || pricingData.length === 0) {
       return next(

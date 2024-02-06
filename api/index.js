@@ -8,12 +8,12 @@ app.use(express.json());
 import pricingRouter  from "./routes/pricing.route.js";
 
 
-import path from "path";
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "/client/dist")));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
-});
+// import path from "path";
+// const __dirname = path.resolve();
+// app.use(express.static(path.join(__dirname, "/client/dist")));
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+// });
 
 
 const port = process.env.PORT || 4000;
@@ -29,7 +29,7 @@ mongoose
   .then(() => {
     console.log("Connected to MongoDB!");
   })
-  .catch((err) => {
+  .catch((err) => { 
     console.log(err);
   });
 
