@@ -9,127 +9,151 @@ export let lapInfo = [
       items: [
         {
           product: {
-            dedupe: "ASUS Chromebook CX1 CX1400CKA-EK0212 CX1400CKA-EK0212",
+            dedupe: "ASUS ZenBook 14 UX425EA-KI618X 90NB0SM1-M00ER0",
             is_translated: true,
-            alias: "CX1400CKA-EK0212",
-            part_number: "90NX03I2-M007D0",
+            alias: "UX425EA-KI618X",
+            part_number: "90NB0SM1-M00ER0",
             brand: "ASUS",
-            family: "Chromebook",
-            series: "CX1",
-            version: "CX1400CKA-EK0212",
-            model: "ASUS Chromebook CX1 CX1400CKA-EK0212",
+            family: "ZenBook",
+            series: "14",
+            version: "90NB0SM1-M00ER0",
+            model: "ASUS ZenBook 14 UX425EA-KI618X",
             category: "Laptops",
-            "ean/upc_code": "4711387095713, 0197105095717, 197105095717",
+            "ean/upc_code": "4711081575900",
             target_market: "Home",
-            id: "64bcfc4741633c0e0f4b337a",
-          },
-          key_aspects: {
-            release_date: "2023-04-19",
-            ram: "4 GB",
-            storage: "128 GB",
-            processor: "N4500",
-            integrated_graphics_card: "Intel UHD Graphics",
-            battery: "50 Wh",
-            wifi: "Wi-Fi 6 (802.11ax)",
+            id: "6571a8be4773eaf8eb9e3789",
           },
           date: {
-            released: "2023-04-19",
+            released: "2022-02-13",
+          },
+          image: {
+            thumbnail:
+              "https://i.techspecs.io/product-images-thumbnail/laptops/3cd13509-d18e-4213-9016-543dd146ded4.jpeg",
+            large:
+              "https://i.techspecs.io/product-images-large/laptops/8863b551-1294-451f-b111-36728193e686.jpeg",
+          },
+          key_aspects: {
+            release_date: "2022-02-13",
+            ram: "16 GB",
+            storage: "512 GB",
+            processor: "i7-1165G7",
+            integrated_graphics_card: "Intel Iris Xe Graphics",
+            battery: "67 Wh",
           },
           design: {
             body: {
-              type: "Chromebook",
+              type: "Laptop",
               style: "Clamshell",
-              colors: "Silver",
-              finish: "Plastic",
-              "height_(longer_side)": "326.5 mm",
-              weight: "1.47 kg",
-              "width_(shorter_side)": "228.7 mm",
-              thickness: "18.7 mm",
+              colors: "Grey",
+              "width_(longer_side)": "319 mm",
+              weight: "1.17 kg",
+              "height_(shorter_side)": "208 mm",
+              thickness: "13.9 mm",
             },
             keyboard: {
-              additional_features: "Numeric Keypad",
+              additional_features: "Backlight, Numeric Keypad",
             },
             touchpad: {
               pointing_device: "Touchpad",
             },
           },
           display: {
-            type: "TN",
+            type: "IPS",
             definition: "Full HD",
             diagonal: "14 inch",
             "resolution_(h_x_w)": "1920 x 1080 pixels",
             aspect_ratio: "16:9",
-            brightness: "220 cd/m²",
-            contrast_ratio: "500:1",
-            refresh_rate: "60 Hz",
-            additional_features: "LED Backlight, Anti Glare",
-            color_gamut: "45%",
-            rgb_color_space: "NTSC",
+            brightness: "400 cd/m²",
+            additional_features: "Anti Glare",
+            color_gamut: "100%",
+            rgb_color_space: "sRGB",
           },
           camera: {
             front_camera: {
               definition: "HD",
-              additional_features: "Camera Module",
+              additional_features:
+                "Camera Module, Windows Hello, Infrared Camera",
             },
           },
           inside: {
             cpu: {
-              cores: "2",
-              frequency: "1.1 GHz",
-              maximum_frequency: "2.8 GHz",
+              number_of_cores: "4",
+              max_turbo_speed: "4.7 GHz",
               brand: "Intel",
-              model: "N4500",
-              family: "Intel Celeron N",
-              cache: "4 MB",
+              model: "i7-1165G7",
+              generation: "11th gen Intel Core i7",
+              family: "Intel Core i7",
+              cache: "12 MB",
+              "configurable_tdp_(thermal_design_power)_up": "28 W",
+              "configurable_tdp_(thermal_design_power)_up_frequency": "2.8 GHz",
             },
             ram: {
-              capacity: "4 GB",
-              maximum_capacity: "4 GB",
+              capacity: "16 GB",
+              maximum_capacity: "16 GB",
               type: "LPDDR4x-SDRAM",
               form_factor: "On-board",
             },
             gpu: {
-              integrated_card_model: "Intel UHD Graphics",
+              integrated_card_model: "Intel Iris Xe Graphics",
               additional_features: "Integrated Graphics Card",
             },
             storage: {
-              total_capacity: "128 GB",
+              total_capacity: "512 GB",
             },
             ssd: {
-              storage_type: "eMMC",
+              capacity: "512 GB",
+              total_ssd_capacity: "512 GB",
+              number_of_ssds: "1",
+              storage_type: "SSD",
+              ssd_interface: "NVMe, PCI Express 3.0",
+              ssd_form_factor: "M.2",
             },
             battery: {
-              "capacity_(mah)": "50 Wh",
-              number_of_cells: "3",
+              "capacity_(mah)": "67 Wh",
+              number_of_cells: "4",
               type: "Lithium-Ion (Li-Ion)",
             },
             power: {
-              power: "45 W",
+              power: "65 W",
               voltage: "100 - 240 V",
-              output_voltage: "15 V",
-              output_current: "3 A",
+              output_voltage: "20 V",
+              output_current: "3.25 A",
               frequency: "50 - 60 Hz",
             },
             wireless: {
-              wifi: "Wi-Fi 6 (802.11ax)",
-              bluetooth_version: "5.2",
+              wifi_standards: "Wi-Fi 6 (802.11ax)",
+              bluetooth_version: "5.0",
               type_of_antenna: "2x2",
               additional_features: "Bluetooth Module",
             },
             audio: {
+              speaker_brand: "Harman Kardon",
+              sound_system: "SonicMaster",
               additional_features:
                 "Headphone Microphone Combo Jack, Microphone",
             },
+            security: {
+              additional_features: "Trusted Platform Module (TPM)",
+            },
             software: {
-              operating_system_version: "ChromeOS",
+              operating_system_version: "Windows 11 Pro",
+              operating_system_bit_version: "64-bit",
             },
             ports: {
-              "number_of_usb_3,2_gen_1_type_c_ports": "2",
-              "number_of_usb_3,2_gen_1_type_a_ports": "2",
+              "number_of_usb_3,2_gen_1_type_a_ports": "1",
+              number_of_thunderbolt_4_ports: "2",
+              number_of_hdmi_ports: "1",
+              charging: "USB Type-C",
               expansion: "MicroSD (TransFlash)",
               additional_features:
-                "Card Reader, USB Type C DisplayPort Alternate Mode, USB Power Delivery",
+                "Card Reader, USB Power Delivery, USB Type C DisplayPort Alternate Mode",
             },
+          },
+          no: {
+            touchscreen: "Touchscreen",
+            numeric_keypad: "Numeric Keypad",
+            ethernet_card: "Ethernet",
+            dedicated_card: "Dedicated Graphics Card",
           },
           No: {
             Touchscreen: "Touchscreen",
@@ -141,409 +165,422 @@ export let lapInfo = [
       ],
     },
   },
-
-  {
-    status: 200,
-    message: "Product details retrieved successfully",
-    data: {
-      type: "detail",
-      language: "en",
-      category: "Laptops",
-      items: [
-        {
-          product: {
-            dedupe: "ASUS ZenBook Flip UX363EA-DH51T UX363EA-DH51T",
-            is_translated: true,
-            alias: "UX363EA-DH51T",
-            part_number: "90NB0RZ1-M03280",
-            brand: "ASUS",
-            family: "ZenBook",
-            series: "Flip",
-            version: "UX363EA-DH51T",
-            model: "ASUS ZenBook Flip UX363EA-DH51T",
-            category: "Laptops",
-            "ean/upc_code": "0192876842973",
-            id: "63e963bba6803e6331dd4762",
-          },
-          key_aspects: {
-            release_date: "2020-12-22",
-            ram: "8 GB",
-            storage: "512 GB",
-            processor: "i5-1135G7",
-            integrated_graphics_card: "Intel Iris Xe Graphics",
-            wifi: "Wi-Fi 6 (802.11ax)",
-          },
-          date: {
-            released: "2020-12-22",
-          },
-          image: {
-            front:
-              "https://lt-techspecs-io.s3.us-west-1.amazonaws.com/f58e08c8-f744-4725-83b8-376305f9d64b_front.jpg",
-          },
-          design: {
-            body: {
-              type: "Hybrid (2-in-1)",
-              style: "Convertible (Folder)",
-              colors: "Grey",
-              "height_(longer_side)": "305 mm",
-              weight: "1.3 kg",
-              "width_(shorter_side)": "211 mm",
-              "thickness_(front)": "1.19 cm",
-              "thickness_(back)": "1.39 cm",
-            },
-            keyboard: {
-              additional_features: "Full Size Keyboard",
-            },
-            touchpad: {
-              pointing_device: "NumberPad",
-            },
-          },
-          display: {
-            definition: "Full HD",
-            diagonal: "13.3 inch",
-            "resolution_(h_x_w)": "1920 x 1080 pixels",
-            aspect_ratio: "16:9",
-            additional_features: "LED Backlight, Touchscreen",
-          },
-          camera: {
-            front_camera: {
-              additional_features: "Camera Module, Infrared Camera",
-            },
-          },
-          inside: {
-            cpu: {
-              cores: "4",
-              frequency: "2.4 GHz",
-              maximum_frequency: "4.2 GHz",
-              brand: "Intel",
-              model: "i5-1135G7",
-              family: "11th gen Intel Core i5",
-              cache: "8 MB",
-              "configurable_tdp_(thermal_design_power)_up": "28 W",
-              "configurable_tdp_(thermal_design_power)_up_frequency": "2.4 GHz",
-            },
-            ram: {
-              capacity: "8 GB",
-              type: "LPDDR4x-SDRAM",
-              clock_speed: "4266 MHz",
-            },
-            gpu: {
-              integrated_card_model: "Intel Iris Xe Graphics",
-              additional_features: "Integrated Graphics Adapter",
-            },
-            storage: {
-              total_capacity: "512 GB",
-            },
-            ssd: {
-              capacity: "512 GB",
-              total_ssd_capacity: "512 GB",
-              number_of_ssds: "1",
-              storage_type: "SSD",
-            },
-            battery: {
-              "capacity_(watt-hours)": "67 Wh",
-              number_of_cells: "4",
-            },
-            power: {
-              power: "65 W",
-              voltage: "100 - 240 V",
-              output_voltage: "19 V",
-              frequency: "50/60 Hz",
-            },
-            wireless: {
-              wifi: "Wi-Fi 6 (802.11ax)",
-              bluetooth_version: "5.0",
-              additional_features: "Bluetooth Module",
-            },
-            audio: {
-              number_of_speakers: "2",
-              sound_system: "SonicMaster",
-              additional_features: "Microphone",
-            },
-            software: {
-              operating_system_version: "Windows 10 Home",
-            },
-            ports: {
-              "number_of_usb_3,2_gen_1_type_a_ports": "1",
-              number_of_hdmi_ports: "1",
-            },
-          },
-          No: {
-            Dedicated_Adapter: "Dedicated Graphics Adapter",
-            Card_Reader: "Card Reader",
-            Ethernet_Card: "Ethernet",
-            Numeric_Keypad: "Numeric Keypad",
-          },
-        },
-      ],
-    },
-  },
 ];
 
 export let LapList = {
   status: 200,
-  message: "Search results retrieved successfully",
+  message: "Product list retrieved successfully",
   data: {
-    total_results: 47,
-    total_results_per_page: 12,
-    total_pages: 4,
-    page: 0,
-    type: "search",
+    total_results: 437,
+    total_results_per_page: 20,
+    total_pages: 22,
+    page: "0",
+    type: "listAllProducts",
     items: [
       {
         product: {
-          id: "63e963bba6803e6331dd4762",
+          id: "6571a8be4773eaf8eb9e3789",
           brand: "ASUS",
-          model: "ASUS ZenBook Flip UX363EA-DH51T",
-          version: "UX363EA-DH51T",
+          model: "ASUS ZenBook 14 UX425EA-KI618X",
+          version: "90NB0SM1-M00ER0",
           family: "ZenBook",
-          series: "Flip",
+          series: "14",
           category: "Laptops",
         },
         image: {
           front:
-            "https://lt-techspecs-io.s3.us-west-1.amazonaws.com/f58e08c8-f744-4725-83b8-376305f9d64b_front.jpg",
+            "https://lifemobile.lk/wp-content/uploads/2021/06/Asus-Zenbook-14-UX425EA-3.jpg",
           back: null,
-        },
-        thumbnail: {
-          image_1:
-            "https://thumbnail-techspecs-io.s3.amazonaws.com/thumbnail_1_63e963bba6803e6331dd4762.jpg",
-          image_2: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/3cd13509-d18e-4213-9016-543dd146ded4.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/8863b551-1294-451f-b111-36728193e686.jpeg",
         },
       },
       {
         product: {
-          id: "64bcfc4741633c0e0f4b337a",
+          id: "652a697ab2d6ba0b5b29da35",
           brand: "ASUS",
-          // model: "ASUS ZenBook Flip UX363EA-EM038T",
-          model: "ASUS Chromebook CX1 CX1400CKA-EK0212",
-
-          version: "UX363EA-EM038T",
-          family: "ZenBook",
-          series: "Flip",
+          model: "ASUS VivoBook 15 A513EA-BQ1355T",
+          version: "A513EA-BQ1355T-KTS",
+          family: "VivoBook",
+          series: "15",
           category: "Laptops",
         },
         image: {
           front:
-            "https://lt-techspecs-io.s3.us-west-1.amazonaws.com/4d5cd9ae-214a-477b-9864-5afbbed9cdb0_front.jpg",
+            "https://lifemobile.lk/wp-content/uploads/2021/06/Asus-Zenbook-14-UX425EA-3.jpg",
           back: null,
-        },
-        thumbnail: {
-          image_1:
-            "https://thumbnail-techspecs-io.s3.amazonaws.com/thumbnail_1_63e963bba6803e6331dd4701.jpg",
-          image_2: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/2bbf16d5-3fa9-4c3a-8e7c-9d069ee30b5f.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/f5041cc2-e6b8-47e0-b659-143e0d36c086.jpeg",
         },
       },
       {
         product: {
-          id: "63e963bba6803e6331dd459c",
+          id: "6516a2cd078906effa59d26f",
           brand: "ASUS",
-          model: "ASUS ZenBook Flip UX363EA-EM038T-BE",
-          version: "UX363EA-EM038T-BE",
-          family: "ZenBook",
-          series: "Flip",
+          model: "ASUS ExpertBook B6 Flip B6602FC2-MH0117",
+          version: "B6602FC2-MH0117",
+          family: "ExpertBook",
+          series: "B6 Flip",
           category: "Laptops",
         },
         image: {
           front:
-            "https://lt-techspecs-io.s3.us-west-1.amazonaws.com/93ca27c7-2d1a-4a6c-b3d5-603a5c1cda82_front.jpg",
+            "https://e7.pngegg.com/pngimages/398/672/png-clipart-gray-acer-laptop-laptop-laptop-notebook-electronics-gadget-thumbnail.png",
           back: null,
-        },
-        thumbnail: {
-          image_1:
-            "https://thumbnail-techspecs-io.s3.amazonaws.com/thumbnail_1_63e963bba6803e6331dd459c.jpg",
-          image_2: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/ed93f9a6-ab4a-4239-af12-f72eae1f8e32.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/35a4123f-5a29-421d-b359-2da3954852a0.jpeg",
         },
       },
       {
         product: {
-          id: "63e963bba6803e6331dd4591",
+          id: "6515515e59e6337c6b5e739c",
           brand: "ASUS",
-          model: "ASUS ZenBook Flip UX363EA-EM042T",
-          version: "UX363EA-EM042T",
-          family: "ZenBook",
-          series: "Flip",
+          model: "ASUS ExpertBook B1 B1500CBA-BQ0650X",
+          version: "90NX0551-M00W50",
+          family: "ExpertBook",
+          series: "B1",
           category: "Laptops",
         },
         image: {
-          front:
-            "https://lt-techspecs-io.s3.us-west-1.amazonaws.com/89e09be3-dde7-4901-a01e-16e8c99b3697_front.jpg",
+          front: null,
           back: null,
-        },
-        thumbnail: {
-          image_1:
-            "https://thumbnail-techspecs-io.s3.amazonaws.com/thumbnail_1_63e963bba6803e6331dd4591.jpg",
-          image_2: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/70627a83-182b-4f66-ad25-957a3542d610.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/d8cf44c0-a427-4775-99c7-09bdc2f34a68.jpeg",
         },
       },
       {
         product: {
-          id: "63e963bba6803e6331dd4598",
+          id: "6515515e59e6337c6b5e739a",
           brand: "ASUS",
-          model: "ASUS ZenBook Flip UX363EA-EM189T",
-          version: "UX363EA-EM189T",
-          family: "ZenBook",
-          series: "Flip",
+          model: "ASUS ExpertBook B2 Flip B2502FBA-N80235X",
+          version: "90NX04L1-M008V0",
+          family: "ExpertBook",
+          series: "B2 Flip",
           category: "Laptops",
         },
         image: {
-          front:
-            "https://lt-techspecs-io.s3.us-west-1.amazonaws.com/a8fcecd5-5ec2-4f16-b1b3-b9608cc0701f_front.jpg",
+          front: null,
           back: null,
-        },
-        thumbnail: {
-          image_1:
-            "https://thumbnail-techspecs-io.s3.amazonaws.com/thumbnail_1_63e963bba6803e6331dd4598.jpg",
-          image_2: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/f34e9f3a-795c-41ae-a1f7-044f899d6536.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/5236523f-8d74-4799-a8c1-bacf5c5f97d6.jpeg",
         },
       },
       {
         product: {
-          id: "63e963bba6803e6331dd4590",
+          id: "6515515e59e6337c6b5e7399",
           brand: "ASUS",
-          model: "ASUS ZenBook Flip UX363EA-EM191T",
-          version: "UX363EA-EM191T",
-          family: "ZenBook",
-          series: "Flip",
+          model: "ASUS Chromebook CX1 CX1400CKA-EK0078",
+          version: "90NX03I2-M002M0",
+          family: "Chromebook",
+          series: "CX1",
           category: "Laptops",
         },
         image: {
-          front:
-            "https://lt-techspecs-io.s3.us-west-1.amazonaws.com/edad568f-c5c9-4c17-8438-0b40bdc69bd8_front.jpg",
+          front: null,
           back: null,
-        },
-        thumbnail: {
-          image_1:
-            "https://thumbnail-techspecs-io.s3.amazonaws.com/thumbnail_1_63e963bba6803e6331dd4590.jpg",
-          image_2: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/244d38d8-739f-461b-91bb-47ff94698232.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/29f45b67-b06b-481e-88e8-39940e740d9a.jpeg",
         },
       },
       {
         product: {
-          id: "63e963bba6803e6331dd4702",
+          id: "6515515e59e6337c6b5e7397",
           brand: "ASUS",
-          model: "ASUS ZenBook Flip UX363EA-HP069T",
-          version: "UX363EA-HP069T",
-          family: "ZenBook",
-          series: "Flip",
+          model: "ASUS TUF Gaming F15 FX507ZC4-HN041W",
+          version: "90NR0GW1-M002X0",
+          family: "TUF Gaming",
+          series: "F15",
           category: "Laptops",
         },
         image: {
-          front:
-            "https://lt-techspecs-io.s3.us-west-1.amazonaws.com/85b4fb33-be28-4554-bf01-61352ae24309_front.jpg",
+          front: null,
           back: null,
-        },
-        thumbnail: {
-          image_1:
-            "https://thumbnail-techspecs-io.s3.amazonaws.com/thumbnail_1_63e963bba6803e6331dd4702.jpg",
-          image_2: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/ba71ad80-7a76-4dd5-bdf0-eadf8182cbc1.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/f2890674-9376-44b4-8031-20940f3594e4.jpeg",
         },
       },
       {
         product: {
-          id: "63e963bba6803e6331dd4768",
+          id: "6513ffcbe37edf2c450ad1d8",
           brand: "ASUS",
-          model: "ASUS ZenBook Flip UX363EA-HP165T",
-          version: "UX363EA-HP165T",
-          family: "ZenBook",
-          series: "Flip",
+          model: "ASUS ExpertBook B1 B1500CBA-BQ0649X",
+          version: "90NX0551-M00W40",
+          family: "ExpertBook",
+          series: "B1",
           category: "Laptops",
         },
         image: {
-          front:
-            "https://lt-techspecs-io.s3.us-west-1.amazonaws.com/8016fcb8-bdce-4368-bd22-3044a2384b2c_front.jpg",
+          front: null,
           back: null,
-        },
-        thumbnail: {
-          image_1:
-            "https://thumbnail-techspecs-io.s3.amazonaws.com/thumbnail_1_63e963bba6803e6331dd4768.jpg",
-          image_2: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/70b2691d-ef21-4160-a84d-3e9d7fb9b1be.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/0384e44d-90a0-4a04-8d07-9d7642007260.jpeg",
         },
       },
       {
         product: {
-          id: "63e963bba6803e6331dd476a",
+          id: "6513ffcbe37edf2c450ad1d6",
           brand: "ASUS",
-          model: "ASUS ZenBook Flip UX363EA-HP165T-BE",
-          version: "UX363EA-HP165T-BE",
-          family: "ZenBook",
-          series: "Flip",
+          model: "ASUS ExpertBook B2 B2502CBA-KJ0457X",
+          version: "90NX04K1-M00KC0",
+          family: "ExpertBook",
+          series: "B2",
           category: "Laptops",
         },
         image: {
-          front:
-            "https://lt-techspecs-io.s3.us-west-1.amazonaws.com/1348b0b8-abcf-48f6-90a9-e7dc5b22352c_front.jpg",
+          front: null,
           back: null,
-        },
-        thumbnail: {
-          image_1:
-            "https://thumbnail-techspecs-io.s3.amazonaws.com/thumbnail_1_63e963bba6803e6331dd476a.jpg",
-          image_2: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/9f0ff384-5ebd-4990-b567-fe3f72bf02fe.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/b248c821-1f14-4a5e-96b4-b702ded851d1.jpeg",
         },
       },
       {
         product: {
-          id: "63e963bba6803e6331dd46fd",
+          id: "6513ffcbe37edf2c450ad1d4",
           brand: "ASUS",
-          model: "ASUS ZenBook Flip UX363EA-HP171R",
-          version: "UX363EA-HP171R",
-          family: "ZenBook",
-          series: "Flip",
+          model: "ASUS ROG Strix G18 G814JV-N5042W",
+          version: "90NR0CM1-M003F0",
+          family: "ROG",
+          series: "Strix G18",
           category: "Laptops",
         },
         image: {
-          front:
-            "https://lt-techspecs-io.s3.us-west-1.amazonaws.com/a95bd13b-e5bc-4da0-9190-bed6448d3720_front.jpg",
+          front: null,
           back: null,
-        },
-        thumbnail: {
-          image_1:
-            "https://thumbnail-techspecs-io.s3.amazonaws.com/thumbnail_1_63e963bba6803e6331dd46fd.jpg",
-          image_2: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/43a99370-0fc0-44c9-9c6e-a63559ce6c8e.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/0471e271-c07a-4dbd-bdec-68a67ed68620.jpeg",
         },
       },
       {
         product: {
-          id: "63e963bba6803e6331dd46fa",
+          id: "6513ffcbe37edf2c450ad1d2",
           brand: "ASUS",
-          model: "ASUS ZenBook Flip UX363EA-HP172T",
-          version: "UX363EA-HP172T",
-          family: "ZenBook",
-          series: "Flip",
+          model: "ASUS ROG Zephyrus G14 GA402NV-N2030W",
+          version: "90NR0E64-M001B0",
+          family: "ROG",
+          series: "Zephyrus G14",
           category: "Laptops",
         },
         image: {
-          front:
-            "https://lt-techspecs-io.s3.us-west-1.amazonaws.com/8b28ddd9-2444-455c-ad71-fd96b4c47b6b_front.jpg",
+          front: null,
           back: null,
-        },
-        thumbnail: {
-          image_1:
-            "https://thumbnail-techspecs-io.s3.amazonaws.com/thumbnail_1_63e963bba6803e6331dd46fa.jpg",
-          image_2: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/8f831405-fdb8-4eec-b446-d6cf7dc992e6.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/f185b4c0-4953-4207-9af1-4f6ccbc1f4c1.jpeg",
         },
       },
       {
         product: {
-          id: "63e963bba6803e6331dd4706",
+          id: "6513ffcbe37edf2c450ad1d1",
           brand: "ASUS",
-          model: "ASUS ZenBook Flip UX363EA-HP183T",
-          version: "UX363EA-HP183T",
-          family: "ZenBook",
-          series: "Flip",
+          model: "ASUS ROG Zephyrus G16 GU603ZU-N3003W",
+          version: "90NR0H45-M000S0",
+          family: "ROG",
+          series: "Zephyrus G16",
           category: "Laptops",
         },
         image: {
-          front:
-            "https://lt-techspecs-io.s3.us-west-1.amazonaws.com/8fa91225-d95f-4c88-a364-973b0d714ed5_front.jpg",
+          front: null,
           back: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/20b2952e-59fe-443e-8f2c-18276b7f38cc.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/d8ea28d2-34d4-45a6-b86e-8db423c9622b.jpeg",
         },
-        thumbnail: {
-          image_1:
-            "https://thumbnail-techspecs-io.s3.amazonaws.com/thumbnail_1_63e963bba6803e6331dd4706.jpg",
-          image_2: null,
+      },
+      {
+        product: {
+          id: "6513ffcbe37edf2c450ad1ce",
+          brand: "ASUS",
+          model: "ASUS VivoBook 15 D1505YA-L1078W",
+          version: "D1505YA-L1078W",
+          family: "VivoBook",
+          series: "15",
+          category: "Laptops",
+        },
+        image: {
+          front: null,
+          back: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/871a07a6-6eaf-42c6-8d35-40da50be103b.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/e77fdcda-b330-46e9-933f-d269f5de516d.jpeg",
+        },
+      },
+      {
+        product: {
+          id: "6513ffcbe37edf2c450ad1cb",
+          brand: "ASUS",
+          model: "ASUS VivoBook 16 X1605ZA-MB185W",
+          version: "90NB0ZA2-M00MJ0",
+          family: "VivoBook",
+          series: "16",
+          category: "Laptops",
+        },
+        image: {
+          front: null,
+          back: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/6232a90e-bb58-4ee1-857f-2af5a6223d0a.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/998afdaa-cf8f-47dd-a1d9-8b01bccf4a10.jpeg",
+        },
+      },
+      {
+        product: {
+          id: "6513ffcbe37edf2c450ad1c9",
+          brand: "ASUS",
+          model: "ASUS VivoBook Pro 15 M6500RC-HN058W",
+          version: "90NB0YK2-M003T0",
+          family: "VivoBook",
+          series: "Pro 15",
+          category: "Laptops",
+        },
+        image: {
+          front: null,
+          back: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/e78b8381-5829-4fae-8f60-3b779682fb96.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/98f32a7d-1f33-42b7-8b95-bf3f13c9bdb5.jpeg",
+        },
+      },
+      {
+        product: {
+          id: "6513ffcbe37edf2c450ad1aa",
+          brand: "ASUS",
+          model: "ASUS ZenBook 14 Flip OLED UP3404VA-KN057W",
+          version: "90NB10E2-M00200",
+          family: "ZenBook",
+          series: "14 Flip OLED",
+          category: "Laptops",
+        },
+        image: {
+          front: null,
+          back: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/05f745a5-f874-4782-8206-cb0203f1900c.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/e8821f51-150b-4d94-bb13-6725eb6d698a.jpeg",
+        },
+      },
+      {
+        product: {
+          id: "64b3c1c3abfa2513ba96a9a4",
+          brand: "ASUS",
+          model: "ASUS ROG Strix G17 G713QR-K4017T",
+          version: "G713QR-K4017T",
+          family: "ROG",
+          series: "Strix G17",
+          category: "Laptops",
+        },
+        image: {
+          front: null,
+          back: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/8e5fa3f7-6e8e-43d5-8610-6309432e4bdc.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/e8f6848a-d464-49a3-9a30-b4e9c8072d45.jpeg",
+        },
+      },
+      {
+        product: {
+          id: "64b3c1c3abfa2513ba96a9a3",
+          brand: "ASUS",
+          model: "ASUS ROG Strix G17 G713QM-K4228T",
+          version: "G713QM-K4228T",
+          family: "ROG",
+          series: "Strix G17",
+          category: "Laptops",
+        },
+        image: {
+          front: null,
+          back: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/5ad58c60-307c-4311-a0d9-6571905723cb.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/aa57ccdc-c4be-4174-abdf-6cdb0bbaebfa.jpeg",
+        },
+      },
+      {
+        product: {
+          id: "64b3c1c3abfa2513ba96a9a2",
+          brand: "ASUS",
+          model: "ASUS ROG Strix G17 G713IE-HX111T",
+          version: "G713IE-HX111T",
+          family: "ROG",
+          series: "Strix G17",
+          category: "Laptops",
+        },
+        image: {
+          front: null,
+          back: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/3f3ecda9-f3b7-4c49-907a-ecc06c389f24.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/a4dda54c-a547-4873-a164-931bffda8b44.jpeg",
+        },
+      },
+      {
+        product: {
+          id: "64b11ec135b72a3fd6065ceb",
+          brand: "ASUS",
+          model: "ASUS ExpertBook B1 B1400CBA-EB0603X",
+          version: "B1400CBA-EB0603X",
+          family: "ExpertBook",
+          series: "B1",
+          category: "Laptops",
+        },
+        image: {
+          front: null,
+          back: null,
+          thumbnail:
+            "https://i.techspecs.io/product-images-thumbnail/laptops/081b828a-7b4a-4a5f-97d8-4840341a3a23.jpeg",
+          large:
+            "https://i.techspecs.io/product-images-large/laptops/dddfce2a-5c02-40c1-b036-c8d928cf8c1d.jpeg",
         },
       },
     ],
   },
 };
+
+// id: "6571a8be4773eaf8eb9e3789",
+// id: "652a697ab2d6ba0b5b29da35",
+// id: "6516a2cd078906effa59d26f",
+// id: "6515515e59e6337c6b5e739c",
+// id: "6515515e59e6337c6b5e739a",
+// id: "6515515e59e6337c6b5e7399",
+// id: "6515515e59e6337c6b5e7397",
+// id: "6513ffcbe37edf2c450ad1d8",
+// id: "6513ffcbe37edf2c450ad1d6",
+// id: "6513ffcbe37edf2c450ad1d4",
+// id: "6513ffcbe37edf2c450ad1d2",
+// id: "6513ffcbe37edf2c450ad1d1",
+// id: "6513ffcbe37edf2c450ad1ce",
+// id: "6513ffcbe37edf2c450ad1cb",
+// id: "6513ffcbe37edf2c450ad1c9",
+// id: "6513ffcbe37edf2c450ad1aa",
+// id: "64b3c1c3abfa2513ba96a9a4",
+// id: "64b3c1c3abfa2513ba96a9a3",
+// id: "64b3c1c3abfa2513ba96a9a2",
+// id: "64b11ec135b72a3fd6065ceb",

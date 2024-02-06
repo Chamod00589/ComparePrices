@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../component/Header";
 import Search from "../component/Search";
 import { lapInfo, LapList } from "../data/LapSpec.js";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [isSearching, setIsSearching] = useState(true);
@@ -9,33 +10,36 @@ export default function Home() {
     lapInfo[1].data.items[0]
   );
 
-  const Card = ({ product }) => {
+  const Card = ({ item }) => {
     return (
-      <div className="max-w-xs rounded overflow-hidden shadow-lg m-4">
+      <Link
+        to={`/LapOverView/${item.product.id}`}
+        className="max-w-xs rounded overflow-hidden shadow-lg m-4"
+      >
         <img
-          src={product.image?.front == null ? "" : product.image.front}
+          src={item.image?.front == null ? "" : item.image.front}
           alt="Product"
           className="w-full"
         />
+        {console.log(item.image.front)}
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{`${product.brand} ${product.family} ${product.series} ${product.version}`}</div>
-          {/* You can add more details here if needed */}
+          <div className="font-bold text-xl mb-2">{`${item.product.brand} ${item.product.family} ${item.product.series} ${item.product.version}`}</div>
         </div>
-      </div>
+      </Link>
     );
   };
 
   const CardList = ({ LapList }) => {
     return (
-      <div className="card-list">
+      <div className="flex flex-wrap justify-center">
         {LapList.data.items.map((item) => (
-          <Card key={item.product.id} product={item.product} />
+          <Card key={item.product.id} item={item} />
         ))}
       </div>
     );
   };
 
-  console.log(LapList.data.items);
+  // console.log(LapList.data.items);
   return (
     <div className="bg-light-2 ">
       <div className=" h-full text-black mx-auto lg:w-3/5 w-full sm:text-sm">

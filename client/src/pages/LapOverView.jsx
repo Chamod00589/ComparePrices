@@ -8,15 +8,28 @@ import Laptop from "../assets/Laptop.png";
 import { lapInfo } from "../data/LapSpec.js";
 import Search from "../component/Search";
 import Pricing from "../component/Pricing";
-
+import { useParams } from "react-router-dom";
 const testMode = false;
 
 export default function LapOverView() {
+  const { id } = useParams(); // Fetching id parameter from URL
   const [isSearching, setIsSearching] = useState(true);
   const [specifications, setSpecifications] = useState(
     lapInfo[1].data.items[0]
   );
 
+  // console.log(id)
+  useEffect(() => {
+    if (id) {
+      const selectedItem = lapInfo.find(
+        (item) => item.data.items[0].product.id === id
+      );
+      console.log(selectedItem);
+      if (selectedItem) {
+        setSpecifications(selectedItem.data.items[0]);
+      }
+    }
+  }, [id]);
   function ImageSection() {
     return (
       <div
