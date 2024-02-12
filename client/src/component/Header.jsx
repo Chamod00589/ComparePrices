@@ -3,14 +3,14 @@ import SignInIcon from "../assets/SignInIcon.svg";
 import SearchIcon from "../assets/SearchIcon.svg";
 import { Link } from "react-router-dom";
 
-function Header({ isSearching, setIsSearching }) {
+export default function Header({ isSearching, setIsSearching }) {
   return (
     <div>
       <Link
         to="/"
         className="bg-light-7  text-white flex items-center  py-2 flex justify-center"
       >
-        <span className="text-4xl font-LilitaOne font-extralight text-light-2">
+        <span className=" text-4xl font-LilitaOne font-extralight text-light-2">
           ComparePrices.lk
         </span>
       </Link>
@@ -39,5 +39,3 @@ function Header({ isSearching, setIsSearching }) {
     </div>
   );
 }
-
-export default Header;

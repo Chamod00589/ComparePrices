@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { LapList, lapInfo } from "../data/LapSpec";
+import { useNavigate } from "react-router-dom";
 
 export default function Search({ setIsSearching, setSpecifications }) {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
 
@@ -21,17 +23,17 @@ export default function Search({ setIsSearching, setSpecifications }) {
 
   const handleItemClick = (id) => {
     // Find the selected item based on its id from lapInfo
+    navigate(`/LapOverView/${id}`);
     const selectedItem = lapInfo.find(
       (item) => item.data.items[0].product.id === id
     );
-
     // Set the specifications with the selected item
     setSpecifications(selectedItem.data.items[0]);
 
     setIsSearching(false);
-    
+
     // You may also perform any other actions related to item click
-};
+  };
   return (
     <div>
       <div className="p-2 bg-light-6 flex flex-row font-Abel text-lg">
@@ -56,7 +58,7 @@ export default function Search({ setIsSearching, setSpecifications }) {
                 onClick={() => handleItemClick(product.id)}
               >
                 <img
-                  src={image?.front == null ? "" : image.front}
+                  src={image?.large == null ? "" : image.large}
                   alt="LaptopImage"
                   className="border-red-900 ml-2 w-16 object-contain"
                 />

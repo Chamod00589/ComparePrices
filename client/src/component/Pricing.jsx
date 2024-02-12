@@ -11,18 +11,20 @@ export default function Pricing({ id }) {
     lastUpdate: new Date().toISOString().split("T")[0],
   });
 
-  useEffect(() => {
-    const fetchPricing = async () => {
-      const res = await fetch(`/api/pricing/get/${id}`);
-      const data = await res.json();
-      if (data.success === false) {
-        console.log(data.message);
-        setPrices([]);
-        return;
-      }
-      setPrices(data);
-    };
+  const fetchPricing = async () => {
+    const res = await fetch(`/api/pricing/get/${id}`);
+    const data = await res.json();
+    if (data.success === false) {
+      console.log(data);
+      setPrices([]);
+      return;
+    }
+    console.log(data.message);
+    setPrices(data);
+  };
+  // console.log(id);
 
+  useEffect(() => {
     fetchPricing();
   }, [id]);
 

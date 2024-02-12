@@ -4846,8 +4846,7 @@ export let LapList = {
           category: "Laptops",
         },
         image: {
-          front:
-            "https://lifemobile.lk/wp-content/uploads/2021/06/Asus-Zenbook-14-UX425EA-2.jpg",
+          front:"https://lifemobile.lk/wp-content/uploads/2021/06/Asus-Zenbook-14-UX425EA-2.jpg",
           back: null,
           thumbnail:
             "https://i.techspecs.io/product-images-thumbnail/laptops/3cd13509-d18e-4213-9016-543dd146ded4.jpeg",
@@ -4866,8 +4865,7 @@ export let LapList = {
           category: "Laptops",
         },
         image: {
-          front:
-            "https://www.laptoparena.net/images/ASUS_VivoBook_15_A513EA-BQ1355T_A513EA-BQ1355T_image_5.jpg",
+          front:"https://www.laptoparena.net/images/ASUS_VivoBook_15_A513EA-BQ1355T_A513EA-BQ1355T_image_5.jpg",
           back: null,
           thumbnail:
             "https://i.techspecs.io/product-images-thumbnail/laptops/2bbf16d5-3fa9-4c3a-8e7c-9d069ee30b5f.jpeg",
@@ -4886,8 +4884,7 @@ export let LapList = {
           category: "Laptops",
         },
         image: {
-          front:
-            "https://m.media-amazon.com/images/I/716RM5grSkL._AC_UF894,1000_QL80_.jpg",
+          front:"https://m.media-amazon.com/images/I/716RM5grSkL._AC_UF894,1000_QL80_.jpg",
           back: null,
           thumbnail:
             "https://i.techspecs.io/product-images-thumbnail/laptops/ed93f9a6-ab4a-4239-af12-f72eae1f8e32.jpeg",

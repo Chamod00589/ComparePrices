@@ -18,18 +18,20 @@ export default function LapOverView() {
     lapInfo[0].data.items[0]
   );
 
-  // console.log(id)
-  useEffect(() => {
+  function selectItem() {
     if (id) {
       const selectedItem = lapInfo.find(
         (item) => item.data.items[0].product.id === id
       );
-      console.log(selectedItem);
       if (selectedItem) {
         setSpecifications(selectedItem.data.items[0]);
       }
     }
+  }
+  useEffect(() => {
+    selectItem();
   }, [id]);
+
   function ImageSection() {
     return (
       <div
