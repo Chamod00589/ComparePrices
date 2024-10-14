@@ -2,9 +2,16 @@ import express from "express";
 import mongoose from "mongoose";
 import path from "path";
 import dotenv from "dotenv";
+
 dotenv.config();
 const app = express();
 app.use(express.json());
+
+
+import cors from 'cors';
+app.use(cors({
+  origin: '*' 
+}));
 
 import pricingRouter from "./routes/pricing.route.js";
 
