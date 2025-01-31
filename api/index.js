@@ -14,6 +14,7 @@ app.use(cors({
 }));
 
 import pricingRouter from "./routes/pricing.route.js";
+import authRouter from './routes/auth.route.js';
 
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, "/client/dist")));
@@ -22,6 +23,7 @@ const port = process.env.PORT || 4000;
 
 // http://localhost:3000/api/pricing/get/63e963bba6803e6331dd4762
 app.use("/api/pricing", pricingRouter);
+app.use('/api/auth', authRouter);
 
 mongoose
   .connect(process.env.MONGO)
