@@ -27,3 +27,45 @@ export const getPricing = async (req, res, next) => {
     next(error);
   }
 };
+
+export const updatePricing = async (req, res, next) => {
+  try {
+    const pricing = await Pricing.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: {
+          price: req.body.price,
+          name: req.body.name,
+          website: req.body.website,
+          lastUpdate: req.body.lastUpdate,
+        },
+      },
+      { new: true }
+    );
+
+    if (!pricing) {
+      return next(errorHandler(404, 'Pricing not found!'));
+    }
+
+    res.status(200).json(pricing);
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const deletePricing = async (req, res, next) => {
+  try {
+    const pricing = await Pricing.findByIdAndDelete(req.params.id);
+
+    if (!pricing) {
+      return next(errorHandler(404, 'Pricing not found!'));
+    }
+
+    res.status(200).json({ 
+      success: true,
+      message: 'Pricing has been deleted!'
+    });
+  } catch (error) {
+    next(error);
+  }
+};

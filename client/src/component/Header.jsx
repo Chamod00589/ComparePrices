@@ -20,8 +20,10 @@ export default function Header({ isSearching, setIsSearching }) {
         <span className="p-2 hidden sm:inline-flex">PRICES</span>
         <span className="p-2">REVIEWS</span>
         <div className="flex justify-center items-center mr-2">
-          <span>LOGIN </span>
-          <img src={SignInIcon} alt="Icon" className="w-5 ml-1 " />
+          <Link to="/login" className="flex items-center">
+            <span>LOGIN </span>
+            <img src={SignInIcon} alt="Icon" className="w-5 ml-1 " />
+          </Link>
           <div
             className=" bg-red-600 ml-5  rounded-sm"
             onClick={() => {

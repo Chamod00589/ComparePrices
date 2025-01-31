@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 export default function Pricing({ id }) {
   const [prices, setPrices] = useState([]);
   const [isShowPriceForm, setIsShowPriceForm] = useState(false);
+  const [editingId, setEditingId] = useState(null);
   const [formData, setFormData] = useState({
     laptopId: id,
     price: "",
@@ -33,42 +34,110 @@ export default function Pricing({ id }) {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleEditClick = (price) => {
+    setEditingId(price._id);
+    setFormData({
+      laptopId: id,
+      price: price.price,
+      name: price.name,
+      website: price.website,
+      lastUpdate: new Date().toISOString().split("T")[0],
+    });
+    setIsShowPriceForm(true);
+  };
+
+  const handleUpdate = async () => {
+    try {
+      const response = await fetch(`/api/pricing/update/${editingId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      
+      if (data.success === false) {
+        console.error('Error updating price');
+        return;
+      }
+
+      // Update the prices list with the edited data
+      setPrices(prices.map(price => 
+        price._id === editingId ? { ...price, ...formData } : price
+      ));
+
+      // Reset form
+      setFormData({
+        laptopId: id,
+        price: "",
+        name: "",
+        website: "",
+        lastUpdate: new Date().toISOString().split("T")[0],
+      });
+      setEditingId(null);
+      setIsShowPriceForm(false);
+    } catch (error) {
+      console.error('Error updating price:', error);
+    }
+  };
+
   const handleAddPrice = () => {
-    // Validate the form data before making the request
-    if (
-      !formData.laptopId ||
-      !formData.price ||
-      !formData.name ||
-      !formData.website ||
-      !formData.lastUpdate
-    ) {
+    if (!formData.laptopId || !formData.price || !formData.name || 
+        !formData.website || !formData.lastUpdate) {
       console.error("Please fill in all fields");
       return;
     }
 
-    // Make the POST request to create new data
-    fetch("/api/pricing/create", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // Refresh the prices after successful creation
-        setPrices([...prices, data]);
-        // Clear the form data
-        setFormData({
-          laptopId: id,
-          price: "",
-          name: "",
-          website: "",
-          lastUpdate: new Date().toISOString().split("T")[0],
-        });
+    if (editingId) {
+      handleUpdate();
+    } else {
+      // Make the POST request to create new data
+      fetch("/api/pricing/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       })
-      .catch((error) => console.error("Error creating new price:", error));
+        .then((response) => response.json())
+        .then((data) => {
+          // Refresh the prices after successful creation
+          setPrices([...prices, data]);
+          // Clear the form data
+          setFormData({
+            laptopId: id,
+            price: "",
+            name: "",
+            website: "",
+            lastUpdate: new Date().toISOString().split("T")[0],
+          });
+        })
+        .catch((error) => console.error("Error creating new price:", error));
+    }
   };
+
+  const handleDelete = async (priceId) => {
+    if (!window.confirm('Are you sure you want to delete this price?')) return;
+
+    try {
+      const response = await fetch(`/api/pricing/delete/${priceId}`, {
+        method: 'DELETE',
+      });
+      const data = await response.json();
+      
+      if (data.success === false) {
+        console.error('Error deleting price');
+        return;
+      }
+
+      // Remove the deleted price from the state
+      setPrices(prices.filter(price => price._id !== priceId));
+    } catch (error) {
+      console.error('Error deleting price:', error);
+    }
+  };
+
   return (
     <div className="mt-2 bg-light-1 px-4 py-3 font-bold">
       <div className="text-2xl">Pricing</div>
@@ -87,9 +156,12 @@ export default function Pricing({ id }) {
           {prices.map((price) => (
             <div key={price._id} className="flex p-2 items-center">
               <div className="w-1/4 text-red1 text-lg">{`Rs ${price.price}`}</div>
-              <div className="pl-3 underline text-blue-600 w-1/6 text-xs">
+              <button 
+                className="pl-3 underline text-blue-600 w-1/6 text-xs cursor-pointer"
+                onClick={() => handleEditClick(price)}
+              >
                 Edit
-              </div>
+              </button>
               <a
                 href={price.website}
                 target="_blank"
@@ -97,8 +169,16 @@ export default function Pricing({ id }) {
               >
                 {price.name}
               </a>
-              <div className="pl-3 w-1/4">
+              <div className="pl-3 w-1/4 flex items-center">
                 {new Date(price.lastUpdate).toLocaleDateString("en-GB")}
+                <button 
+                  className="ml-2 text-red-500 hover:text-red-700"
+                  onClick={() => handleDelete(price._id)}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                  </svg>
+                </button>
               </div>
             </div>
           ))}
@@ -115,6 +195,8 @@ export default function Pricing({ id }) {
               Add new shop price
             </button>
           </div>
+
+          
         ) : (
           ""
         )}

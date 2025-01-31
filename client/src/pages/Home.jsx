@@ -35,13 +35,15 @@ export default function Home() {
         {LapList.data.items.map((item) => (
           <Card key={item.product.id} item={item} />
         ))}
+        
       </div>
     );
   };
 
   // console.log(LapList.data.items);
   return (
-    <div className="bg-light-2 ">
+    <div className="bg-light-2  ">
+      
       <div className=" h-full text-black mx-auto lg:w-3/5 w-full sm:text-sm">
         <Header isSearching={isSearching} setIsSearching={setIsSearching} />
         {isSearching ? (
